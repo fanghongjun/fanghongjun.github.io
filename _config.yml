@@ -1,22 +1,106 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-#permalink:           pretty
-#relative_permalinks: true
+title: just4fun
+url: http://fanghongjun.github.io
+author: fanghongjun
 
-# Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
-baseurl:             ''
-paginate:            5
+body:
+  layout-reverse: true # 开启后sidebar在右边，反之左边
+  sidebar-overlay: true # 开启后正文不随sidebar移动而移动
 
-# About/contact
-author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+head:   # include/head.html中配置
+- tag: meta # Enable responsiveness on mobile devices
+  var:
+  - key: name
+    value: viewport
+  - key: content
+    value: width=device-width, initial-scale=1.0, maximum-scale=1
+- tag: meta
+  var:
+  - key: http-equiv
+    value: X-UA-Compatible
+  - key: content
+    value: IE=edge
+- tag: meta
+  var:
+  - key: http-equiv
+    value: content-type
+  - key: content
+    value: 'text/html; charset=utf-8'
+- tag: meta # google站点验证
+  var:
+  - key: name
+    value: google-site-verification
+  - key: content
+    value: SvSM9awNOLip8RuF9DbKsY7Kj4LlRhXamzhgupiFmY0
+- tag: link
+  var:
+  - key: rel
+    value: profile
+  - key: href
+    value: //gmpg.org/xfn/11
+- tag: link 
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/poole.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/syntax.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/lanyon.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/custom.css
+- tag: link # rss
+  var:
+  - key: rel
+    value: alternate
+  - key: href
+    value: /atom.xml
+  - key: title
+    value: RSS
+  - key: type
+    value: application/rss+xml
+- tag: link 
+  var:
+  - key: rel
+    value: apple-touch-icon-precomposed
+  - key: href
+    value: //www.gravatar.com/avatar/958d41ef1ace1ae0831a157b065dc332?d=wavatar&s=144
+- tag: link 
+  var:
+  - key: rel
+    value: shortcut icon
+  - key: href
+    value: //www.gravatar.com/avatar/958d41ef1ace1ae0831a157b065dc332?d=wavatar&s=32
 
-# Custom vars
-version:             1.0.0
+sidebar:
+  nav:
+  - title: '<i class="fas fa-home fa-fw"></i> 首页'
+    href: /
+  - title: '<i class="fas fa-tags fa-fw"></i> 标签'
+    href: /tags
+  - title: '<i class="fas fa-archive fa-fw"></i> 归档'
+    href: /archive
+
+script:
+- var:
+  - key: src
+    value: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js 
+

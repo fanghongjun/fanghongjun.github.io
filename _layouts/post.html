@@ -9,9 +9,10 @@ layout: default
 </div>
 
 <div class="related">
-  <h2>Related Posts</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
+    {% if post %}
+    <h3>相关博文</h3>
       <li>
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
@@ -19,7 +20,7 @@ layout: default
             <small>{{ post.date | date_to_string }}</small>
           </a>
         </h3>
-      </li>
+     {% endif %}
     {% endfor %}
   </ul>
 </div>
